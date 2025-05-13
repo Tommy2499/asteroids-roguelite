@@ -1,0 +1,71 @@
+/* Root styles for the application */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; /* Default font stack */
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark; /* Potential support for light and dark modes */
+  color: rgba(255, 255, 255, 0.87); /* Default text color */
+  background-color: #242424; /* Default background color */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility; /* Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Styling for anchor tags */
+a {
+  font-weight: 500;
+  color: #646cff; /* Default link color */
+  text-decoration: inherit; /* Inherit text decoration */
+}
+a:hover {
+  color: #535bf2; /* Hover color for links */
+}
+
+/* Styling for the body element */
+body {
+  margin: 0;
+  display: flex;
+  place-items: center; /* Center content horizontally and vertically */
+  min-width: 320px; /* Minimum width for responsiveness */
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Styling for h1 elements */
+h1 {
+  font-size: 3.2em; /* Large font size for headings */
+  line-height: 1.1;
+}
+
+/* Styling for buttons */
+button {
+  border-radius: 8px; /* Rounded corners */
+  border: 1px solid transparent; /* Transparent border */
+  padding: 0.6em 1.2em; /* Padding for buttons */
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit; /* Inherit font from parent */
+  background-color: #333; /* Dark background for buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: border-color 0.25s; /* Smooth border transition */
+  color: white; /* Button text color */
+}
+button:hover {
+  border-color: #646cff; /* Border color on hover */
+}
+
+/* Styling for secondary buttons */
+.button-2 {
+  font-size: 1.2rem; /* Slightly larger font size */
+  border: 2.5px solid #646cff; /* Default border color */
+  background-color: transparent; /* Transparent background */
+  color: #646cff; /* Default text color */
+  transition: color 0s; /* Instant color transition */
+}
+
+.button-2:hover {
+  border-color: #73B6FF; /* Border color on hover */
+  color: #73B6FF; /* Text color on hover */
+}

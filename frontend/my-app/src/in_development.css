@@ -1,0 +1,68 @@
+/* Main container for the "In Development" page */
+#in-dev-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+/* Content container for the "In Development" page */
+#in-dev-content {
+    width: 60%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 48px; /* Space between elements */
+    font-size: 1.2rem; /* Base font size */
+}
+
+/* Styling for the orbiting ship */
+#dev-ship {
+    width: 40px;
+    height: 40px;
+    transform-origin: 0; /* Rotates around a point 100px to the right of the ship's center */
+    animation: orbit 4s linear infinite; /* Continuous orbit animation */
+}
+
+/* Container for the orbiting animation */
+.orbit-container {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+}
+
+/* Back button container */
+#dev-back-link {
+    align-self: flex-start;
+}
+
+/* Back button styling */
+#dev-back-button {
+    font-size: 1rem;
+}
+
+/* Container for the text content */
+#dev-text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* Space between text elements */
+}
+
+/* Keyframes for the orbiting animation */
+@keyframes orbit {
+    0% {
+      transform: rotate(0deg) translateX(60px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg) translateX(60px) rotate(0deg);
+    }
+}
