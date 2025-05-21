@@ -1,3 +1,4 @@
+/* Main container for the leaderboard page */
 #leaderboards-page {
     width: 100vw;
     min-height: 100vh;
@@ -8,24 +9,24 @@
     background-color: #101827;
 }
 
+/* Content container for the leaderboard page */
 #leaderboards-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 24px;
-
+    gap: 24px; /* Space between elements */
 }
 
 #leaderboards-title {
     margin: 0;
     padding: 0;
-    
     padding-bottom: 14px;
     font-size: 4rem;
 }
 
+/* Tabs container for switching between score and level leaderboards */
 .tabs {
     width: 100%;
     display: flex;
@@ -33,12 +34,14 @@
     justify-content: space-around;
 }
 
+/* Container for the leaderboard entries */
 #leaderboard-container {
     display: flex;
     flex-direction: row;
-    padding-bottom: 64px;
+    padding-bottom: 64px; /* Space between the bottom of the leaderboard and edge of the page */
 }
 
+/* Styling for the rank column */
 .rank {
     display: flex;
     justify-content: center;
@@ -48,16 +51,19 @@
     font-size: 1.8rem;
 }
 
+/* Stack container for leaderboard items */
 #leaderboard-stack {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 20px; /* Space between leaderboard items */
 }
 
+/* Buffer for spacing on the right side of the leaderboard */
 #leaderboard-buffer {
     width: 80px;
 }
 
+/* Styling for individual player entries */
 .player {
     display: flex;
     flex-direction: row;
@@ -71,15 +77,18 @@
     background-color: #1F2937;
 }
 
+/* Container for each leaderboard item */
 .leaderboard-item {
     display: flex;
 }
 
+/* Styling for the favorite ship image */
 .favorite-ship {
     width: 40px;
     height: 40px;
 }
 
+/* Styling for the username in the leaderboard */
 .leaderboard-username {
     display: flex;
     align-self: flex-end;
@@ -91,6 +100,7 @@
     padding-left: 16px;
 }
 
+/* Styling for the score in the leaderboard */
 .leaderboard-score {
     display: flex;
     align-self: flex-end;
@@ -102,20 +112,18 @@
     padding-right: 8px;
 }
 
+/* Active tab styling */
 .button-2.active {
-    border-color: #73B6FF;
+    border-color: #73B6FF; /* Highlight color for active tab */
     color: #73B6FF;
-    outline: 4px solid #73B6FF;
+    outline: 4px solid #73B6FF; /* Outline for active tab */
 }
 
+/* Wrapper for the back button */
 #leaderboard-back-wrapper {
     display: flex;
     padding-top: 64px;
     margin-bottom: -48px;
     width: 200%;
     max-width: 95vw;
-}
-
-#leaderboard-back {
-
 }

@@ -248,10 +248,11 @@
     transition: 0.2s ease;
 }
 
-/* Slightly enlarge on hover */
+/* Slightly enlarge and cursor becomes pointer on hover */
 .exit-icon:hover {
 
     transform: scale(1.07);
+    cursor: pointer;
 }
 
 /* Slightly shrink on click */
