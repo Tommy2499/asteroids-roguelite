@@ -1,0 +1,121 @@
+#leaderboards-page {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #101827;
+}
+
+#leaderboards-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+
+}
+
+#leaderboards-title {
+    margin: 0;
+    padding: 0;
+    
+    padding-bottom: 14px;
+    font-size: 4rem;
+}
+
+.tabs {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#leaderboard-container {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 64px;
+}
+
+.rank {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    font-size: 1.8rem;
+}
+
+#leaderboard-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#leaderboard-buffer {
+    width: 80px;
+}
+
+.player {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 28px;
+    padding-right: 28px;
+    width: 400px;
+    height: 80px;
+    border-radius: 12px;
+    background-color: #1F2937;
+}
+
+.leaderboard-item {
+    display: flex;
+}
+
+.favorite-ship {
+    width: 40px;
+    height: 40px;
+}
+
+.leaderboard-username {
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: flex-start;
+    height: 95%;
+    font-size: 1.1rem;
+    width: 60%;
+    padding-left: 16px;
+}
+
+.leaderboard-score {
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: flex-end;
+    height: 95%;
+    font-size: 1.1rem;
+    width: 20%;
+    padding-right: 8px;
+}
+
+.button-2.active {
+    border-color: #73B6FF;
+    color: #73B6FF;
+    outline: 4px solid #73B6FF;
+}
+
+#leaderboard-back-wrapper {
+    display: flex;
+    padding-top: 64px;
+    margin-bottom: -48px;
+    width: 200%;
+    max-width: 95vw;
+}
+
+#leaderboard-back {
+
+}

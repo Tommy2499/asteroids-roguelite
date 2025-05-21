@@ -1,0 +1,67 @@
+# OS-Specific Files
+.DS_Store
+Thumbs.db
+
+# Archives and Compressed Files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Compiled Binaries and Build Artifacts
+*.o
+*.out
+*.a
+*.so
+*.dll
+*.exe
+*.class
+*.jar
+*.war
+*.pyc
+*.pyo
+*.pyd
+node_modules/
+dist/
+build/
+bin/
+obj/
+
+# Logs and Debugging Files
+*.log
+debug.log
+*.pid
+*.rej
+
+# Python-Specific
+__pycache__/
+venv/
+
+# C/C++ Debug Symbols and Coverage
+*.dSYM/
+*.gcda
+*.gcno
+*.gcov
+
+# Editor and IDE Files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
+*.bak
+*.backup
+*.orig  
+
+# Dependency Managers
+package-lock.json
+yarn.lock
+
+# Environment and Secrets
+.env
+.env.local
+.env.*.local
+secrets.json
+*.pem
+*.pfx

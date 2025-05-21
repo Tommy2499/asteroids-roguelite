@@ -10,7 +10,7 @@ services:
       - database:/var/lib/mysql
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
-      - "53346:3306"
+      - "127.0.0.1:3306:3306"
     networks:
       - pluto_network
   phpmyadmin1:
@@ -23,7 +23,7 @@ services:
       PMA_USER: root
       PMA_PASSWORD: password
     ports:
-      - "50084:80"
+      - "3333:80"
     networks:
       - pluto_network
   local_backend:
@@ -31,19 +31,15 @@ services:
       dockerfile: localbackend.Dockerfile
       context: .
     ports:
-      - "8080:8080"
+      - "5000:8080"
     networks:
       - pluto_network
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://user_database:3306/Users
-      SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: password
   frontend:
     build:
       dockerfile: frontend.Dockerfile
       context: .
     ports:
-      - "5173:5173"
+      - "80:80"
     networks:
       - pluto_network
 volumes:

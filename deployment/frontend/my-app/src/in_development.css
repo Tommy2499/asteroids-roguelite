@@ -1,0 +1,71 @@
+
+#in-dev-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+#in-dev-content {
+    width: 60%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    font-size: 1.2rem;
+}
+
+#dev-info {
+    
+}
+
+#dev-description {
+
+}
+
+#dev-ship {
+    width: 40px;
+    height: 40px;
+    transform-origin: 0; /* rotates around a point 100px to the right of the ship's center */
+    animation: orbit 4s linear infinite;
+}
+
+
+.orbit-container {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+}
+
+#dev-back-link {
+    
+    align-self: flex-start;
+}
+
+#dev-back-button {
+    font-size: 1rem;
+}
+
+#dev-text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+@keyframes orbit {
+    0% {
+      transform: rotate(0deg) translateX(60px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg) translateX(60px) rotate(0deg);
+    }
+}
