@@ -31,7 +31,7 @@ public class DatabaseClient {
      * Default constructor for the DatabaseClient.
      */
     public DatabaseClient() {
-        this("jdbc:mysql://project_07-user_database-1:3306", "root", "password");
+        this("jdbc:mysql://user_database:3306", "root", "password");
     }
 
     /**
@@ -380,6 +380,30 @@ public class DatabaseClient {
     }
 
     /**
+     * Fetches the user id from the database.
+     * 
+     * @param dbConn - Connection to the database
+     * @param username - username of the User
+     * @return - The user id, returns -1 if user does not exist or an error occurs
+     */
+    private int getUserId(Connection dbConn, String username) {
+        // Use try with resources to close the statement and result set
+        try (PreparedStatement stmt = dbConn.prepareStatement("SELECT User_id FROM Users WHERE User_name = ?")) {
+            stmt.setString(1, username);
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    return rs.getInt("User_id");
+                }
+            }
+        } catch (SQLException e) {
+            System.out.println("Error fetching user ID for " + username + ": " + e.getMessage());
+            e.printStackTrace();
+        }
+        
+        return -1;
+    }
+
+    /**
      * Fetches the top n scores from the database. Filters by difficulty
      * Score must be one of the following: "score", "level", "duration_seconds".
      * 
@@ -521,30 +545,6 @@ public class DatabaseClient {
         }
     }
         
-    /**
-     * Fetches the user id from the database.
-     * 
-     * @param dbConn   - Connection to the database
-     * @param username - username of the User
-     * @return - The user id, returns -1 if user does not exist or an error occurs
-     */
-    private int getUserId(Connection dbConn, String username) {
-        // Use try with resources to close the statement and result set
-        try (PreparedStatement stmt = dbConn.prepareStatement("SELECT user_id FROM Users WHERE user_name = ?")) {
-            stmt.setString(1, username);
-            try (ResultSet rs = stmt.executeQuery()) {
-                if (rs.next()) {
-                    return rs.getInt("user_id");
-                }
-            }
-        } catch (SQLException e) {
-            System.out.println("Error fetching user ID for " + username + ": " + e.getMessage());
-            e.printStackTrace();
-        }
-
-        return -1;
-    }
-
     /**
      * Fetches the profile id from the database.
      * 

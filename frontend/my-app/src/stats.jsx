@@ -19,7 +19,7 @@ function Stats() {
 
     // Fetch the user's stats from the backend when the component is rendered
     useEffect(() => {
-        fetch(`http://localhost:8080/api/getStats?username=${encodeURIComponent(username)}&profile_name=${encodeURIComponent(profile_name)}`)
+        fetch(`http://137.184.232.147:5000/api/getStats?username=${encodeURIComponent(username)}&profile_name=${encodeURIComponent(profile_name)}`)
             .then((response) => response.json())
             .then((data) => {
                 console.log(`Success: ${data.success}, Error: ${data.error}`);

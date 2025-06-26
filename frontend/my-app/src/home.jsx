@@ -51,7 +51,7 @@ function Home() {
     const handleLogin = async () => {
         const startTime = performance.now(); // Start timer
 
-        const response = await fetch(`http://localhost:8080/api/login?name=${encodeURIComponent(username)}&pass=${encodeURIComponent(password)}`);
+        const response = await fetch(`http://137.184.232.147:5000/api/login?name=${encodeURIComponent(username)}&pass=${encodeURIComponent(password)}`);
         const data = await response.json();
 
         const endTime = performance.now(); // End timer
@@ -80,10 +80,10 @@ function Home() {
     const handleRegister = async () => {
         const startTime = performance.now(); // Start timer
 
-        const response = await fetch(`http://localhost:8080/api/register?name=${encodeURIComponent(username)}&pass=${encodeURIComponent(password)}`);
+        const response = await fetch(`http://137.184.232.147:5000/api/register?name=${encodeURIComponent(username)}&pass=${encodeURIComponent(password)}`);
         const data = await response.json();
 
-        const profileResponse = await fetch(`http://localhost:8080/api/createProfile?username=${encodeURIComponent(username)}&profile_name=${encodeURIComponent(username)}`)
+        const profileResponse = await fetch(`http://137.184.232.147:5000/api/createProfile?username=${encodeURIComponent(username)}&profile_name=${encodeURIComponent(username)}`)
         const profileData = await profileResponse.json();
 
         const endTime = performance.now(); // End timer
