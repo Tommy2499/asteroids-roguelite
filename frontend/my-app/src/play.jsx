@@ -448,7 +448,8 @@ const Game = () => {
 
     // Start Button (outside of canvas)
     const startBtn = document.getElementById("startGameButton");
-    startBtn?.addEventListener("click", async () => {
+    startBtn?.addEventListener("click", async (event) => {
+      event.target.blur(); // Remove focus to prevent spacebar from triggering button
       scoreUploadedRef.current = false;
       suppressUploadRef.current = true; // prevent upload for a few frames
       sessionStorage.removeItem("scoreUploaded");
@@ -465,7 +466,8 @@ const Game = () => {
       }, 500);
     });
 
-    pauseButtonRef.current.addEventListener("click", () => {
+    pauseButtonRef.current.addEventListener("click", (event) => {
+      event.target.blur(); // Remove focus to prevent spacebar from triggering button
       paused = !paused;
       pauseButtonRef.current.innerText = paused ? "Resume" : "Pause";
     });
