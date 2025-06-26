@@ -513,10 +513,19 @@ const Game = () => {
           </div>
 
           <div className="infoColumn">
-            <span><strong>Lives:</strong> <span id="livesDisplayValue">0</span></span>
-            <span><strong>Score:</strong> <span id="scoreDisplayValue">0</span></span>
-            <span><strong>Level:</strong> <span id="levelDisplayValue">0</span></span>
-            <span><strong>Time:</strong> <span id="timeDisplayValue">0</span></span>
+            <div className="infoSection">
+              <div className="infoTitle">Stats</div>
+              <div className="infoField"><div>Lives: </div><div id="livesDisplayValue">0</div></div>
+              <div className="infoField"><div>Score: </div><div id="scoreDisplayValue">0</div></div>
+              <div className="infoField"><div>Level: </div><div id="levelDisplayValue">0</div></div>
+              <div className="infoField"><div>Time: </div><div id="timeDisplayValue">0</div></div>
+            </div>
+            <div className="infoSection">
+              <div className="infoTitle">Controls</div>
+              <div className="infoField"><div>Accelerate: </div><div>W</div></div>
+              <div className="infoField"><div>Rotate: </div><div>A / D</div></div>
+              <div className="infoField"><div>Shoot: </div><div>S / Space</div></div>
+            </div>
           </div>
         </div>
       </div>

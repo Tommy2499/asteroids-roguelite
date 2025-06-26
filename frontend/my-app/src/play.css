@@ -98,23 +98,32 @@ canvas {
 .infoColumn {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  gap: 1em;
-  font-size: 1.2rem;
-  min-width: 120px;
-  color: white;
+  justify-content: center;
+  width: min(100vmin, calc(30vw - 60px));
 }
 
-.infoColumn span {
+.infoSection {
   display: flex;
-  gap: 0.5em;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.7em;
+  font-size: 1.2rem;
+  padding-bottom: 24px;
+  padding-top: 24px;
 }
 
-.infoColumn span > span {
-  display: inline-block;
-  min-width: 4ch;
-  text-align: right;
+.infoTitle {
+  font-size: 1.5rem;
+  padding-bottom: 4px;
+}
+
+.infoField {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 16px;
+  padding-right: 16px;
+  max-width: 300px;
 }
 
 /* ====== RESPONSIVE: Adjust canvas size and info layout ====== */
