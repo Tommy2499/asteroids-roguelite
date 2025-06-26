@@ -28,7 +28,7 @@ function App() {
   return (
     <AuthProvider>
     {/** Pages to render here */}
-      <BrowserRouter>
+      <BrowserRouter basename="/asteroids">
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/main_menu' element={<ProtectedRoute><MainMenu/></ProtectedRoute>}/>

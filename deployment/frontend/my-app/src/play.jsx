@@ -34,16 +34,16 @@ const Game = () => {
   const shipImg = new Image();
   const invincibleShip = new Image();
 
-  asteroidImg32.src = `${asteroid_32}?v=${Date.now()}`; // Force reload with a unique query string
-  asteroidImg48.src = `${asteroid_48}?v=${Date.now()}`; 
-  asteroidImg64.src = `${asteroid_64}?v=${Date.now()}`;
-  cometImg.src = `${comet}?v=${Date.now()}`; 
-  alienImg.src = `${alien}?v=${Date.now()}`;
-  alienBulletImg.src = `${alient_bullet}?v=${Date.now()}`;
-  playerBulletImg.src = `${player_bullet}?v=${Date.now()}`;
+  asteroidImg32.src = asteroid_32;
+  asteroidImg48.src = asteroid_48; 
+  asteroidImg64.src = asteroid_64;
+  cometImg.src = comet; 
+  alienImg.src = alien;
+  alienBulletImg.src = alient_bullet;
+  playerBulletImg.src = player_bullet;
 
-  shipImg.src = `${ship}?v=${Date.now()}`; 
-  invincibleShip.src = `${invShip}?v=${Date.now()}`; 
+  shipImg.src = ship; 
+  invincibleShip.src = invShip; 
 
   const { user } = useAuth();
   const scoreUploadedRef = useRef(null);

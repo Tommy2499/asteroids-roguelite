@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './leaderboard.css';
 import { Link } from 'react-router-dom';
 import { formatLongNumber } from './utils.js'; // Utility function to format large numbers
+import asteroidLogo from './images/asteroid-logo-bgless.png';
 
 function Leaderboard() {
     // State to track the active tab (score or level)
@@ -21,7 +22,7 @@ function Leaderboard() {
             let newLeaders = [];
             for (let leader of data.leaderboard) {
                 // Assign a placeholder image for the favorite ship
-                leader.favorite_ship = '/asteroid-logo-bgless.png';
+                leader.favorite_ship = asteroidLogo;
                 // If the tab is 'level', use the level as the score
                 if (tab === 'level') {
                     leader.score = leader.level;
@@ -59,9 +60,9 @@ function Leaderboard() {
                     <div id='leaderboard-stack'>
                         {/* Map through the leaderboard data and render each entry */}
                         {leaders.map((data, index) => (
-                            <div className='leaderboard-item'>
+                            <div className='leaderboard-item' key={index}>
                                 <div className='rank'>{index+1}</div>
-                                                                <div className='player' key={index}>
+                                    <div className='player'>
                                     <img src={data.favorite_ship} alt='ship' className='favorite-ship'/>
                                     <div className='leaderboard-username'>{data.user}</div>
                                     <div className='leaderboard-score'>{data.score}</div>
