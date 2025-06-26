@@ -99,7 +99,9 @@ canvas {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: min(100vmin, calc(30vw - 60px));
+  width: min(100vmin, calc(30vw));
+  height: 100%;
+  gap: 32px;
 }
 
 .infoSection {
@@ -107,9 +109,11 @@ canvas {
   flex-direction: column;
   justify-content: flex-start;
   gap: 0.7em;
-  font-size: 1.2rem;
-  padding-bottom: 24px;
-  padding-top: 24px;
+  font-size: 1.1rem;
+  padding: 24px;
+  background-color: rgba(60, 60, 60, 0.5);
+  border-radius: 12px;
+  max-width: 400px;
 }
 
 .infoTitle {
@@ -123,7 +127,6 @@ canvas {
   justify-content: space-between;
   padding-left: 16px;
   padding-right: 16px;
-  max-width: 300px;
 }
 
 /* ====== RESPONSIVE: Adjust canvas size and info layout ====== */
@@ -151,7 +154,6 @@ canvas {
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
     padding: 0.5em 1em;
     border-radius: 8px;
     font-size: 0.9rem;
@@ -160,10 +162,8 @@ canvas {
     color: white;
   }
 
-  .infoColumn span {
-    display: flex;
-    justify-content: space-between;
-    min-width: 150px;
+  .infoSection {
+    background-color: rgba(0, 0, 0, 0.6);
   }
 
   canvas {
